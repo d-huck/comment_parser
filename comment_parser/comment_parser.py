@@ -34,6 +34,7 @@ from comment_parser.parsers import python_parser
 from comment_parser.parsers import ruby_parser
 from comment_parser.parsers import shell_parser
 from comment_parser.parsers import erlang_parser
+from comment_parser.parsers import lisp_parser
 
 MIME_MAP = {
     'application/javascript': js_parser,  # Javascript
@@ -49,6 +50,10 @@ MIME_MAP = {
     'text/x-script.python': python_parser,  # Python
     'text/x-shellscript': shell_parser,  # Unix shell
     'text/xml': html_parser,  # XML
+    'text/x-lisp': lisp_parser,  # Lisp
+    'text/x-clojure': lisp_parser,  # Clojure
+    'text/x-racket': lisp_parser,  # Racket
+    'text/x-scheme': lisp_parser,  # Scheme
     'text/x-erlang': erlang_parser,  # Erlang
 }
 
