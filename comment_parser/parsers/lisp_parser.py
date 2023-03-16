@@ -36,7 +36,7 @@ def extract_comments(code: str) -> List[common.Comment]:
     (?P<literal> (\"([^\"\n])*\")+) |
     (?P<single> ;+(?P<single_content>.*)?$) | 
     (?P<multi> \#\|+(?P<multi_content>(.|\n)*?)?\|+\#) |
-    (?P<error> \|\#(.*)?)
+    (?P<error> \#\|(.*)?)
   """
   
   compiled = re.compile(pattern, re.VERBOSE | re.MULTILINE)
